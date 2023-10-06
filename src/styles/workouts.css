@@ -1,0 +1,37 @@
+.workouts{
+    float: left;
+    width: 300px;
+    color: white;
+}
+
+.workouts a p{
+    margin-left: 90px;
+    background-color: rgb(110, 7, 129);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 18px;
+    box-shadow: 5px 5px rgb(196, 192, 195);
+}
+.workouts a p:hover{
+    background-color: rgb(109, 65, 117);
+}
+.details
+{
+     background: radial-gradient(circle,white 0%,rgb(243, 216, 234) 100%);
+     color: black;
+    border-radius: 15px;
+    margin: 20px;
+    margin-top: 5px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgb(50, 11, 40);
+}
+
+.workouts h3{
+    background-color: rgb(110, 7, 129);
+    border-radius: 15px;
+    margin: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgb(50, 11, 40);
+}

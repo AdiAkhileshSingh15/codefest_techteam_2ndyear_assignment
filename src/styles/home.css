@@ -1,0 +1,26 @@
+.welcome{
+    text-align: center;
+    margin: 200px 300px;
+    color: rgb(85, 18, 59);
+}
+
+.welcome h1{
+    background-color: rgb(85, 18, 59);
+    color: white;
+    box-shadow: 0 0 15px rgb(50, 11, 40);
+    padding:10px;
+    border-radius: 15px;
+}
+.welcome a{
+    margin: 10px;
+    margin-left: 90px;
+    background-color: rgb(110, 7, 129);
+    color: white;
+    border-radius: 15px;
+    padding: 10px 18px;
+    box-shadow: 5px 5px rgb(196, 192, 195);
+}
+
+.welcome a:hover{
+    background-color: rgb(109, 65, 117);
+}

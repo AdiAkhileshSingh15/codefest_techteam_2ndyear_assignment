@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/* base styles */
+
+.welcome{
+  width: 800px;
+  margin: auto;
+}
+
+body{
+  background-color: white;
+}
+.welcome .a {
+  text-align: center;
+}
+
+
+

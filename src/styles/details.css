@@ -1,0 +1,26 @@
+.wdetails{
+    text-align: center;
+    color: black;
+    margin: 150px 300px;
+    width: 800px;
+    background-color: rgb(231, 191, 168);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 15px rgb(50, 11, 40);
+    font-size: large;
+    font-weight: bold;
+}
+
+.key-value {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.key {
+    font-weight: bold;
+    flex-basis: 30%;
+    color: black;
+}
+.value {
+    flex-basis: 70%; 
+}
