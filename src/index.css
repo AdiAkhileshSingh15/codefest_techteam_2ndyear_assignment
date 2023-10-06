@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .pop {
+        @apply hover:scale-105 shadow-2xl transform transition-transform ease-in-out
+    }
+}
