@@ -10,7 +10,7 @@ const Navbar: FC<NavbarProps> = () => {
   const { isLoggedIn, logout } = useContext(AuthContext);
   return (
     <nav className='w-full flex justify-center py-4'>
-      <ToastContainer />
+      <ToastContainer limit={2} autoClose={1000}/>
       {
         isLoggedIn ?
           <PrimaryButton onclick={logout} text='Logout' /> :

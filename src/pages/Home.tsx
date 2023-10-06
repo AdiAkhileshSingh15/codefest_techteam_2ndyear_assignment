@@ -10,7 +10,7 @@ import AddWorkout from '../components/AddWorkout';
 
 
 const Home: FC<HomeProps> = () => {
-  const { isLoggedIn, token, editingId } = useContext(AuthContext)
+  const { isLoggedIn, token, editingId, errorToast } = useContext(AuthContext)
   const navigate = useNavigate();
   const [workouts, setWorkouts] = useState<Workout[]>([]);
   const [numOfWorkouts, setNumOfWorkouts] = useState<number>(workouts.length)
@@ -30,7 +30,7 @@ const Home: FC<HomeProps> = () => {
       .then(res => {
         setWorkouts(res.data);
         setNumOfWorkouts(res.data.length);
-      })
+      }).catch(err => errorToast(err.response.data.error));
   }, [numOfWorkouts, isLoggedIn, editingId])
 
   return (

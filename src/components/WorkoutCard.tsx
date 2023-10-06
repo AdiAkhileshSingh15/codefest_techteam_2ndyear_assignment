@@ -26,8 +26,8 @@ const WorkoutCard: FC<WorkoutCardProps> = ({ workout, setNumOfWorkouts }) => {
                 Authorization: `Bearer ${token}`
             }
         }).then(() => {
-            successToast("Workout deleted successfully");
             setNumOfWorkouts(prev => prev - 1);
+            successToast("Workout deleted successfully");
         }).catch(err => {
             errorToast(err.response.data.error);
         });
@@ -35,9 +35,9 @@ const WorkoutCard: FC<WorkoutCardProps> = ({ workout, setNumOfWorkouts }) => {
 
     const saveHandler:submitHandlerType = (e) => {
         e.preventDefault()
-        if (prevLoad === load && prevReps === reps) return setEditingId("")
         if (isNaN(Number(load))) return errorToast("Load must be a number");
         if(isNaN(Number(reps))) return errorToast("Reps must be a number");
+        if (Number(prevLoad) === Number(load) && Number(prevReps) === Number(reps)) return setEditingId("")
 
         axios.patch(`${baseUrl}/workouts/${editingId}`, {
             load: Number(load), 
@@ -49,7 +49,11 @@ const WorkoutCard: FC<WorkoutCardProps> = ({ workout, setNumOfWorkouts }) => {
         }).then(() => {
             successToast("Workout edited successfully");
             setEditingId("")
-        }).catch(err => errorToast(err.response.data.error))
+        }).catch(err => {
+            setLoad(prevLoad);
+            setReps(prevReps);
+            errorToast(err.response.data.error);
+        })
     }
 
 
