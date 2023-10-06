@@ -1,0 +1,6 @@
+const handleDelete = (id) => {
+    const newwos = wos.filter((wo) => wo._id !== id);
+    setWos(newwos);
+  };
+  handleDelete={handleDelete}
+  <button onClick={()=>handleDelete(wo._id)}>Delete</button>
