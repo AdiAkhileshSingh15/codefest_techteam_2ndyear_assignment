@@ -7,6 +7,7 @@ import React,{useEffect} from 'react'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import AddWorkout from './Components/AddWorkout.js';
+import UpdateWorkout from './Components/UpdateWorkout.js';
 function App() {
   const navigate=useNavigate();
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
         <Route exact path='/Signup' element={<Signup></Signup>}/> 
         <Route exact path='/WorkoutCard' element={<WorkoutCard></WorkoutCard>}/>
         <Route exact path='/AddWorkout' element={<AddWorkout></AddWorkout>}/>
+        <Route exact path='/UpdateWorkout/:id' element={<UpdateWorkout></UpdateWorkout>}/>
         
       </Routes>
       <ToastContainer limit={2}></ToastContainer>

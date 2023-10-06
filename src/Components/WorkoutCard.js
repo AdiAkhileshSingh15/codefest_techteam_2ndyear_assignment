@@ -1,7 +1,7 @@
 import React, { useEffect ,useState} from 'react'
 import './WorkoutCard.css'
 import { toast} from 'react-toastify';
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export default function WorkoutCard() {
 
@@ -52,7 +52,7 @@ export default function WorkoutCard() {
           Add Workout
         </button>
         <button
-          className="btn btn-primary mb-4 mx-{10}"
+          className="btn btn-primary mb-4"
           onClick={handlelogout}
         >
           Logout
@@ -76,7 +76,7 @@ export default function WorkoutCard() {
                 <td> {a.load} </td>
                 <td>
                   <button
-                    // onClick={() => navigate(`/post/${post._id}`)}
+                    onClick={() => navigate(`/UpdateWorkout/${a._id}`)}
                     className="btn btn-primary"
                   >
                     Update
