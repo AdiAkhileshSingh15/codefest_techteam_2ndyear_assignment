@@ -1,0 +1,73 @@
+.container {
+  position: relative;
+  width: 20%;
+  margin: 1rem 0.5rem;
+  border: 1px solid black;
+  background-color: #babbc3;
+  min-width: 200px;
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border-radius: 5px;
+  line-height: 1.5rem;
+}
+
+.DeleteIcon,.CheckIcon, .Arrow {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #b14444;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.CheckIcon {
+  right: 50px;
+  color: #008000;
+}
+.Arrow{
+  color: black;
+  right: 50px;
+}
+.Title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000080;
+}
+.DataSpan {
+  z-index: 10000;
+  font-size: 1.3rem;
+  padding-right: 5px;
+  padding: 0.5rem;
+  margin: -0.5rem;
+  cursor: pointer;
+}
+.TileInput {
+  display: inline;
+  font-size: 1.3rem;
+  width: 5rem;
+  outline: none;
+  border: none;
+  padding: 3px 5px;
+  margin:10px;
+  border-radius: 5px;
+}
+.TileInput::-webkit-outer-spin-button,
+.TileInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.TitleInput{
+  font-size: 2rem;
+  display: inline;
+  width: 10rem;
+  outline: none;
+  border: none;
+  margin:10px;
+  border-radius: 5px;
+}
+.Field{
+  margin:10px 0;
+}
