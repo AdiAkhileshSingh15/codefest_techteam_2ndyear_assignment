@@ -1,0 +1,437 @@
+/* CSS Reset or Normalize.css goes here */
+
+/* Global styles */
+body {
+  font-family: "Quicksand", sans-serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #9b3131;
+}
+.navbar h1 {
+  color: #774a7e;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+/* Style for the home container */
+.home {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the heading */
+.home h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Style for the paragraph */
+.home p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Style for the links */
+.home a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  color: #007bff;
+  background-color: #fff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for links */
+.home a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Add a subtle gradient background for a modern look */
+.navbar1 {
+  background: linear-gradient(to right, #ff6666, #ff4d4d); /* Gradient background */
+  color: #fff; /* Set the text color to white */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  border-bottom: 3px solid #fff; /* Add a bottom border */
+}
+
+/* Increase the font size for the title and add a subtle text shadow */
+.navbar1 h1 {
+  font-size: 28px; /* Adjust the font size as needed */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow */
+}
+
+/* Style the links */
+.navbar1 a {
+  text-decoration: none; /* Remove underlines from links */
+  color: #fff; /* Set link text color to white */
+  margin: 0 20px; /* Add some spacing between links */
+  font-size: 18px; /* Adjust the font size as needed */
+  transition: color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+}
+
+/* Style for the links when hovered */
+.navbar1 a:hover {
+  text-decoration: underline; /* Add underline on hover */
+  color: #ff9999; /* Change the link color on hover */
+  transform: scale(1.1); /* Add a slight zoom effect on hover */
+}
+
+/* Content styles */
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Signup form styles */
+.Signup {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.Signup h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.Signup label {
+  text-align: left;
+  display: block;
+}
+
+.Signup input {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.Signup button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Styling for the login page container */
+.login-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the login form */
+/* Form container */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px; /* Adjust the maximum width as needed */
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px; /* Increase the spacing between form groups */
+}
+
+/* Label styling */
+label {
+  font-size: 18px;
+  margin-bottom: 8px; /* Slightly increase the spacing below labels */
+  color: #333; /* Use a darker color for labels */
+}
+
+/* Input fields styling */
+input[type="email"],
+input[type="password"] {
+  padding: 12px; /* Increase the padding for better input spacing */
+  font-size: 16px; /* Slightly larger font size for better readability */
+  border: 2px solid #ccc; /* Increase border thickness for input fields */
+  border-radius: 5px;
+  transition: border-color 0.3s ease; /* Add a smooth border transition */
+}
+
+/* Button styling */
+button {
+  padding: 12px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth button transition */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Styling for the welcome message */
+p {
+  font-size: 18px;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+/* Error message styling */
+.error-message {
+  font-size: 16px;
+  color: #ff0000;
+  margin-top: 10px;
+}
+
+/* Create Page */
+.Create-page {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* My Workouts */
+.Myworkouts {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Workout List */
+.-list {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.workout-preview {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.workout-preview p {
+  margin: 0;
+  color: #555;
+}
+
+.workout-preview a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.workout-preview a:hover {
+  text-decoration: underline;
+}
+
+/* Workout List Component */
+.workout-list {
+  margin: 20px;
+}
+
+.workout-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Delete and Update Buttons */
+.delete-button {
+  background-color: #FF5733;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.update-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style on hover for buttons */
+.delete-button:hover,
+.update-button:hover {
+  opacity: 0.8;
+}
+
+/* Style for the workout item container */
+.workout-item {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the title */
+.workout-item h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Style for the input fields in edit mode */
+.workout-item input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Style for the buttons */
+.workout-item button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for buttons */
+.workout-item button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the delete button */
+.workout-item button.delete {
+  background-color: #ff3030;
+}
+
+/* Hover effect for delete button */
+.workout-item button.delete:hover {
+  background-color: #e60000;
+}
+
+/* Style for the edit button */
+.workout-item button.edit {
+  background-color: #28a745;
+}
+
+/* Hover effect for edit button */
+.workout-item button.edit:hover {
+  background-color: #1d852f;
+}
