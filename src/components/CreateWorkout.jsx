@@ -41,8 +41,6 @@ export default function CreateWorkout(props){
 
                 const response = await fetch(`${props.baseURI}/workouts`, options)
                 const data = await response.json()
-                console.log(options)
-                console.log(data);
                 setShouldCreate(false);
                 props.setReload(prevState => !prevState);
                 if (response.status == 200) {

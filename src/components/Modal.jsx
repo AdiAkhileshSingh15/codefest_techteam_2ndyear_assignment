@@ -62,7 +62,6 @@ export default function Modal(props) {
         if(shouldUpdate)
         {
             async function patchData(){
-                console.log("patching");
                 const options = {
                     "method":"PATCH",
                     "headers":{
@@ -110,8 +109,6 @@ export default function Modal(props) {
 
                 const response = await fetch(`${props.baseURI}/workouts/${props.id}`, options)
                 const data = await response.json()
-                console.log(options)
-                console.log(data);
                 setShouldDelete(false);
                 props.setReload(prevState => !prevState);
                 if (response.status == 200) {

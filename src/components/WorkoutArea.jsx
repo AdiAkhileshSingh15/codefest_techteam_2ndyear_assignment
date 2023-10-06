@@ -27,7 +27,6 @@ export default function WorkoutArea(props){
             setData(this_data);
         }
         getData();
-        console.log(data);
         
     }, [data.length, shouldReload])
 
@@ -41,7 +40,6 @@ export default function WorkoutArea(props){
                     id={workout._id} 
                     setReload={setReload}/>
             )
-            console.log(workouts)
         }
         catch{
             

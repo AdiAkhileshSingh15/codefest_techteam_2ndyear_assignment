@@ -15,7 +15,6 @@ export default function Login(props){
         {
             if(!formData.isSignUp)
             {
-                console.log("login");
                 async function initiateLogin(){
                     const options = {
                         "method":"POST",
@@ -50,7 +49,6 @@ export default function Login(props){
                     props.setToken(data.token)
                     
 
-                    console.log(data)
                     setFormData(prevData => {
                         return {
                             ...prevData,
@@ -63,7 +61,6 @@ export default function Login(props){
             }
             else
             {
-                console.log(formData);
                 if(formData.password === formData.passwordConfirm)
                 {    
                     async function initiateSignup(){
@@ -87,7 +84,6 @@ export default function Login(props){
                             
                         }
 
-                        console.log(data)
                         setFormData(prevData => {
                             return {
                                 ...prevData,
