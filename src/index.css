@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Onest';
+  src: url('./Assets/Fonts/Onest-Light.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: "IntegralCF";
+  src: url("./Assets/Fonts/IntegralCF-DemiBold.otf") format('opentype');
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./Assets/Fonts/Poppins-Regular.ttf") format('truetype');
+}
+
+.custom-navbar-button {
+    @apply py-2.5 px-5 text-base font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-400 hover:bg-gray-50 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700;
+  }
+
+.custom-navbar-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.003);
+}
+
+.custom-navbar-button:active {
+  @apply text-black;
+}
+
+.default-body {
+  @apply min-h-screen flex justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.bottom-button {
+  @apply mx-4 my-4 p-4 rounded-md text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+.poppins {
+  font-family: "Poppins";
+}
+
+p {
+  font-family: "Poppins";
+}
+
+h1 {
+  @apply text-3xl font-bold;
+  font-family: "Poppins";
+}
+
+.work-h2 {
+  @apply text-2xl font-bold;
+  font-family: "Poppins";
+}

@@ -1,3 +1,4 @@
-# Codefest Techteam Assignment Submission (2ndyear)
-1) Please consider uploading a project demonstration video here.
-2) Ensure your project does not rely on hidden environment variables, as Vercel deployment does not expect any.
+# Work-Out Buddy
+
+Created By- Devashish Raj
+Demo Video- https://drive.google.com/file/d/1drjGRuMU-Jg4h4Ob9gRyAY7wreuBnYJe/view?usp=sharing
