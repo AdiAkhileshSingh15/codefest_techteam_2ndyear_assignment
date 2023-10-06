@@ -28,8 +28,8 @@ export default function Login_page() {
                 password:pas
             });
             const {email,token}=response.data;
-            await Cookies.set("token",token,options);
-            document.cookie="token"+token;
+            Cookies.set("token",token,options);
+            document.cookie="token="+token;
             console.log(Cookies.get("token"));
             console.log(token);
             return true;

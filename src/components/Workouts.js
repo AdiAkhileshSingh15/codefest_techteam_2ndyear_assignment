@@ -8,8 +8,8 @@ import WorkoutItem from './WorkoutItem'
 
 export default function Workouts() {
     const baseUrl="https://workoutapi-fjcr.onrender.com/api";
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFmZDZkYjkzMjQ4NzhhMjU5ZTk4N2MiLCJpYXQiOjE2OTY1ODU0MzUsImV4cCI6MTY5Njg0NDYzNX0.zXQ6lF0DZI8eBwxyL97mRagzIk9bwiYNBpRa4x553Ys";
-    // let token=Cookies.get("token");
+    // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFmZDZkYjkzMjQ4NzhhMjU5ZTk4N2MiLCJpYXQiOjE2OTY1ODU0MzUsImV4cCI6MTY5Njg0NDYzNX0.zXQ6lF0DZI8eBwxyL97mRagzIk9bwiYNBpRa4x553Ys";
+    let token=Cookies.get("token");
     const [workouts, setWorkouts] = useState([]);
 
     useEffect(() => {
