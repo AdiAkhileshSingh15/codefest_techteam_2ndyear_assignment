@@ -2,7 +2,7 @@ import React from 'react'
 import './workout.css'
 export default function Workout() {
   return (
-    <div className='container'>
+    <div className='table'>
        <table>
         <tr>
             <th>Title</th>
