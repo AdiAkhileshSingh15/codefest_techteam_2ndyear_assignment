@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body class="flex justify-center items-center min-h-screen" style="background: #23242a;">
+    <div class="container relative w-380 h-420" style="background: #222;" >
+        <form class="absolute flex-col z-2 px-40 py-50 " style="background: #222; border-radius:8px;">
+            <h2 class="text-center font-medium
+             tracking-widest" style="color: #fff;">Sign In</h2>
+            <div>
+                <input type="text" required>
+                <span>Username</span>
+                <i></i>
+            </div>
+            <div>
+                <input type="password" required>
+                <span>
+                    Password
+                </span>
+                <i></i>
+            </div>
+            <div>
+                <a href="#">Forgot Password</a>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    
+</body>
+</html>
