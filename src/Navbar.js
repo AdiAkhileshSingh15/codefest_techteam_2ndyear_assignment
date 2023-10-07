@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Navbar = ({login}) => {
   return (
     <div className='navbar'>
-        <h2 style={{color: '#f1356d'}}>WorkOutBuddy-CodeFest-2k23</h2>
+        <h2 style={{color: 'blue'}}>WorkOutBuddy-CodeFest-2k23</h2>
         <div>
             {login && <Link to="/"></Link>}
             {!login && (

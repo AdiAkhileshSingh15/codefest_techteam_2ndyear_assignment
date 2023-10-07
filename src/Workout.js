@@ -29,11 +29,11 @@ const Workout = () => {
             }, 700);
         })
         .catch((err) => {
-            if(err.status == 400){
-                console.log(err.response)
+            // console.log(err)
+            if(err.response.status == 400){
                 setError('Please fill in all fields');
             }
-            else if(err.status == 401){
+            else if(err.response.status == 401){
                 setError('Request is not authorized');
             }
             setSuccess(false);
@@ -73,7 +73,7 @@ const Workout = () => {
             <div>
             <input
                 type='number'
-                placeholder='Name'
+                placeholder='Load'
                 required
                 onChange={(e) => {
                     setLoad(e.target.value);

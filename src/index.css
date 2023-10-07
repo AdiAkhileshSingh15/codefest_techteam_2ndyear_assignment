@@ -67,15 +67,31 @@
   border-radius: 8px;
   cursor: pointer;
 }
-/* create new blog form */
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* */
 .create {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 40px;
+  padding-top: 10px;
+  background-color: beige;
+  border-radius: 7%;
 }
+
+.create form{
+  padding-top: 0px;
+}
+
 .create label {
   text-align: left;
+  font-weight: 700;
   display: block;
 }
 .create h2 {
@@ -91,7 +107,7 @@
   box-sizing: border-box;
   display: block;
 }
-.login button {
+.create button {
   background: #f1356d;
   color: #fff;
   border: 0;
@@ -99,13 +115,15 @@
   border-radius: 8px;
   cursor: pointer;
 }
+
 /* */
 .login {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
   padding-top: 10px;
-  background-color: beige;
+  padding-bottom: 10px;
+  background-color: rgb(162, 228, 65);
   border-radius: 7%;
 }
 
@@ -117,6 +135,7 @@
   text-align: left;
   font-weight: 700;
   display: block;
+  padding-left: 1%;
 }
 .login h2 {
   font-size: 20px;
@@ -139,6 +158,7 @@
   border-radius: 8px;
   cursor: pointer;
 }
+/* */
 
 /* */
 .workout h3{
@@ -149,11 +169,17 @@
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  padding-top: 40px;
-  margin-top: 50px;
+  padding-top: 10px;
   border-radius: 10%;
-  height: 9.3cm;
+  height: 9.5cm;
   background-color: beige;
+  justify-content: center;
+  align-content: center;
+}
+
+.workout form {
+  justify-content: center;
+  align-content: center;
 }
 .home {
   flex: content;
@@ -164,7 +190,7 @@
 }
 .workout label {
   text-align: left;
-  font-weight: 500;
+  font-weight: 700;
   display: block;
   padding: 5px;
 }
@@ -173,7 +199,7 @@
   color: #f1356d;
   margin-bottom: 30px;
 }
-.workout input, .login textarea, .login select {
+.workout input, .workout textarea, .workout select {
   width: 100%;
   padding: 6px 10px;
   margin: 10px 0;
@@ -190,14 +216,23 @@
   cursor: pointer;
 }
 .preview {
-  max-width: 200px;
+  max-width: 240px;
   margin: 0 auto;
   text-align: center;
   padding-top: 20px;
   margin-top: 20px;
   border-radius: 10%;
-  height: 2cm;
+  padding-bottom: 2%;
+  height: 2.5cm;
   background-color: beige;
+}
+.preview button{
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer; 
 }
 .dashboard {
   padding-top: 40px;
@@ -222,6 +257,18 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.dashboard button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  align-content: last baseline;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: relative;
+  bottom: -4px;;
+}
 
 .fetchboard {
   padding-top: 40px;
@@ -241,14 +288,87 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.details {
+  padding-top: 7%;
+  align-content: center;
+  justify-content: center;
+}
+
+.details form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(162, 228, 65);
+  border-radius: 3%;
+}
+
+.details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .wk-preview {
-  background-color: lightcoral;
+  background-color: bisque;
   padding-top: 30px;
   max-width: 400px;
   margin: 0 auto;
   border-radius: 7%;
   padding-bottom: 20px;;
 }
+
+/* .update h3{
+  padding: 5%;
+  color: #f1356d;
+}
+/* .update { */
+  /* max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 10%;
+  height: 9.5cm;
+  background-color: beige;
+  justify-content: center;
+  align-content: center;
+} */
+
+.update form {
+  justify-content: center;
+  align-content: center;
+}
+.update label {
+  text-align: left;
+  font-weight: 700;
+  display: block;
+  padding: 5px;
+}
+.update h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.update input, .update textarea, .update select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.update button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */
 
 body {
   margin: 0;

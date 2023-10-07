@@ -85,7 +85,7 @@ const Login = () => {
                 {!pending && (
                     <div style={{ alignContent: 'end', paddingTop: '20px' }}>
                         New to WorkOutBuddy?{' '}
-                        <Link to="/signin">Sign Up</Link>
+                        <Link to="/signup">Sign Up</Link>
                     </div>
                 )}
             </form>

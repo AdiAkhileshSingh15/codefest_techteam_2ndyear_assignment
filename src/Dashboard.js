@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import UseFetch from './UseFetch'
 
 const Dashboard = () => {
@@ -10,6 +10,7 @@ const Dashboard = () => {
     const [error, setError] = useState(null)
     const [pending, setPending] = useState(true)
     const baseurl = 'https://workoutapi-fjcr.onrender.com/api/'
+    const navigate = useNavigate();
     
     useEffect( () => {
         setTimeout( () => {
@@ -25,31 +26,32 @@ const Dashboard = () => {
                 setPending(false)
             })
             .catch((err) => {
-                setError(err.message);
+                if(err.response.status == 401){
+                    setError('Request is not authorized');
+                }
                 setPending(false);
             })
         }, 100)
     }, [])
 
+    const handleLogout = () => {
+        localStorage.removeItem("token");
+        alert('bye');
+        navigate('/');
+    }
     return (
         <div className='dashboard'>
             <h2>Your WorkOut Space:</h2>
             <div style={{alignContent: 'end'}}>
-                <Link to="/addworkout">Add WorkOut</Link>
+                {!error && <Link to="/addworkout">Add WorkOut</Link>}
             </div>
             {pending && <h4 style={{paddingTop: '20px'}}>Loading workouts...</h4>}
-            {error && <h3>Error incurred...please retry</h3>}
+            {error && (<div style={{paddingTop: '10px'}}>
+                <h4>{error}</h4>
+                <Link to='/' style={{position: 'relative', bottom: '-10px', color: 'darkblue'}}>Home</Link>
+                </div>)}
             {!pending && <UseFetch />}
-            {/* {!pending && (
-                data.map((workout) => (
-                    <div className="preview" key={workout._id}>
-                        <h4>Exercise - {workout.title}</h4>
-                        <h4>Reps - {workout.reps}</h4>
-                        <h4>Load(kg) - {workout.load}</h4>
-                        <Link to="./"></Link>
-                    </div>
-                ))
-            )} */}
+            {!error && <button onClick={handleLogout}>Log Out</button>}
         </div>
     )
 }
