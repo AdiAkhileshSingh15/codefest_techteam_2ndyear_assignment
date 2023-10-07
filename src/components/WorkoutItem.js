@@ -1,16 +1,23 @@
 import React, { useState } from 'react'
 import {useEffect} from 'react'
 import axios from 'axios';
+import Cookies from 'js-cookie';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 export default function WorkoutItem(props) {
     const { id,title, load, reps ,setItem} = props;
     const baseUrl="https://workoutapi-fjcr.onrender.com/api";
-    const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFmZDZkYjkzMjQ4NzhhMjU5ZTk4N2MiLCJpYXQiOjE2OTY1ODU0MzUsImV4cCI6MTY5Njg0NDYzNX0.zXQ6lF0DZI8eBwxyL97mRagzIk9bwiYNBpRa4x553Ys";
-    
+    // const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFmZDZkYjkzMjQ4NzhhMjU5ZTk4N2MiLCJpYXQiOjE2OTY1ODU0MzUsImV4cCI6MTY5Njg0NDYzNX0.zXQ6lF0DZI8eBwxyL97mRagzIk9bwiYNBpRa4x553Ys";
+    let token=Cookies.get("token");
+    const navigate = useNavigate();
     
     const fun=(id)=>{
         const val=document.getElementById(id);
         val.style.display='none';
+    }
+    const handleUpdate=(id)=>{
+        // console.log()
+        navigate(`/update/${id}`);
     }
 
     const handleDelete=(id)=>{
@@ -42,7 +49,7 @@ export default function WorkoutItem(props) {
             </ul>
         </div>
         <div>
-            <button style={{backgroundColor:'red',margin:'50px 10px 50px 50px',width:'6vw',borderRadius:'10px'}}>Update</button>
+            <button onClick={()=>{handleUpdate(id)}} style={{backgroundColor:'red',margin:'50px 10px 50px 50px',width:'6vw',borderRadius:'10px'}}>Update</button>
             <button onClick={()=>{handleDelete(id)}} style={{backgroundColor:'red',margin:'50px 50px 50px 10px',width:'6vw',borderRadius:'10px'}}>Delete</button>
         </div>
     </div>

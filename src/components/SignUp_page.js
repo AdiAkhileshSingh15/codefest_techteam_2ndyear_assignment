@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 
@@ -8,7 +8,7 @@ export default function SignUp_page() {
   
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  // const navigate = Navigate();
+  const navigate = useNavigate();
   const handleEmail=(e)=>{
     setemail(e.target.value);
   }
@@ -31,7 +31,8 @@ export default function SignUp_page() {
       Cookies.set("token",token,options);
       console.log(Cookies.get("token"));
       console.log(token);
-      // navigate("/workout");
+      alert("Registered Successfully!! :)");
+      navigate("/workout");
     })
     .catch(error=>{
       window.alert(error.message);
@@ -50,7 +51,7 @@ export default function SignUp_page() {
       <label htmlFor="user_password" className="form-label">Password</label>
       <input type="password" value={password} onChange={handlePass} className="form-control" id="user_password" placeholder="Password"/>
     </div>
-    <button type="button" onClick={()=>handleSignIn(email,password)} className="btn btn-outline-success text-light" style={{backgroundColor:'blue',width:'10vw'}}>Sign in</button>
+    <button type="button" onClick={()=>handleSignIn(email,password)} className="btn btn-outline-success text-light" style={{fontWeight:'bold',backgroundColor:'blue',width:'10vw'}}>Sign in</button>
 </form>
 </div>
 </>

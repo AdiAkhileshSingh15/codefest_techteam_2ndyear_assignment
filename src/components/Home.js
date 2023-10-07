@@ -14,7 +14,7 @@ export default function Home() {
   </div>
   <div className="carousel-inner" style={{width:'80vw',margin:'auto'}}>
     <div className="carousel-item active" style={{width:'100vw'}}>
-      <img src="https://source.unsplash.com/1600x600/?gym" className="d-block w-100" alt="..."/>
+      <img src="https://source.unsplash.com/1600x600/?gym" className="d-block w-100" alt="Getting Image..."/>
     </div>
     <div className="carousel-item" style={{width:'100vw'}}>
       <img src="https://source.unsplash.com/1600x600/?workout" className="d-block w-100" alt="..."/>
