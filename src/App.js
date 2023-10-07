@@ -4,8 +4,6 @@ const BACKEND_URL =
   "https://workoutapi-fjcr.onrender.com/api";
 
 console.log(BACKEND_URL);
-// const token =
-//   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTFmMWVhZDA5NzdkNDQ1NGVjN2U3OGUiLCJpYXQiOjE2OTY1MzgyODUsImV4cCI6MTY5Njc5NzQ4NX0.AhP5Gks5KLA46jlGNlah-2Cd-5REDxnbaIuQld8ByZY";
 
 // process.stdout.write("hellf : ");
 
@@ -13,6 +11,7 @@ export default function App() {
   const [workouts, setWorkouts] = useState([]);
   const [token, setToken] = useState(null);
   const [email, setEmail] = useState("");
+  const [displayworkouts, setDisplayWorkouts] = useState(false);
 
   function FetchWorkouts() {
     if (token === null) {
@@ -33,32 +32,30 @@ export default function App() {
   console.log(workouts);
   return (
     <>
-      <Login setToken={setToken} verb={"signup"} setDisplayEmail={setEmail} />
-      <Login setToken={setToken} verb={"login"} setDisplayEmail={setEmail} />
-      <h1> Welcome {email}</h1>
-
-      <h1> ALL WORKOUTS</h1>
-      <ul>
-        {!!workouts.length &&
-          workouts.map((workout) => (
-            <Workout
-              workout={workout}
-              key={workout._id}
-              setWorkouts={setWorkouts}
-              token={token}
-            />
-          ))}
-      </ul>
-      <NewWorkout addWorkout={setWorkouts} token={token} />
+      <Login
+        setToken={setToken}
+        setDisplayEmail={setEmail}
+        setDisplayWorkouts={setDisplayWorkouts}
+        setWorkouts={setWorkouts}
+      />
+      <br></br>
+      {displayworkouts && (
+        <Display
+          email={email}
+          token={token}
+          setWorkouts={setWorkouts}
+          workouts={workouts}
+        ></Display>
+      )}
     </>
   );
 }
 
-function Login({ setToken, verb, setDisplayEmail }) {
+function Login({ setToken, setDisplayEmail, setDisplayWorkouts, setWorkouts }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function NewLogIn() {
+  function NewLogIn(verb) {
     let credentials = { email: email, password: password };
     fetch(BACKEND_URL + "/user/" + verb, {
       method: "POST",
@@ -73,11 +70,17 @@ function Login({ setToken, verb, setDisplayEmail }) {
       .then((data) => {
         setToken(data.token);
         setDisplayEmail(data.email);
+        setDisplayWorkouts(true);
         console.log(data);
       })
       .catch((error) => {
         console.error(error.message);
       });
+  }
+  function OnLogOut() {
+    setDisplayEmail("");
+    setWorkouts([]);
+    setDisplayWorkouts(false);
   }
 
   return (
@@ -87,14 +90,46 @@ function Login({ setToken, verb, setDisplayEmail }) {
         placeholder="Enter your email"
         onChange={(e) => setEmail(e.target.value)}
         value={email}
+        className="form"
       ></input>
       <input
         type="password"
         placeholder="Enter your password"
         onChange={(e) => setPassword(e.target.value)}
         value={password}
+        className="form"
       ></input>
-      <button onClick={NewLogIn}>{verb}</button>
+      <div class="centered-container">
+        <button onClick={() => NewLogIn("signup")} className="updateb">
+          SIGN UP
+        </button>
+        <button onClick={() => NewLogIn("login")} className="deleteb">
+          LOGIN
+        </button>
+        <button onClick={OnLogOut}>LOGOUT</button>
+      </div>
+    </>
+  );
+}
+
+function Display({ email, token, workouts, setWorkouts }) {
+  return (
+    <>
+      {" "}
+      <h1> Welcome {email}</h1>
+      <h2> You have following planned workouts</h2>
+      <ul className="workouts">
+        {!!workouts.length &&
+          workouts.map((workout) => (
+            <Workout
+              workout={workout}
+              key={workout._id}
+              setWorkouts={setWorkouts}
+              token={token}
+            />
+          ))}
+      </ul>
+      <NewWorkout addWorkout={setWorkouts} token={token} />
     </>
   );
 }
@@ -133,22 +168,25 @@ function NewWorkout({ addWorkout, token }) {
 
   return (
     <>
-      <button onClick={add}>ADD NEW WORKOUT</button>
+      <h2>You can add workouts here</h2>
       <input
         type="text"
         placeholder="Write here"
         value={title}
+        className="newWorkout"
         onChange={(event) => {
           setTitle(event.target.value);
         }}
       ></input>
       <input
         type="number"
-        placeholder="Write here2"
+        placeholder="Write here"
         value={reps}
+        className="newWorkout"
         onChange={(event) => setReps(1 * event.target.value)}
       ></input>
       <select
+        className="values"
         value={loads}
         onChange={(event) => setLoads(1 * event.target.value)}
       >
@@ -156,6 +194,9 @@ function NewWorkout({ addWorkout, token }) {
           <option value={val}>{val}</option>
         ))}
       </select>
+      <div className="centered-container">
+        <button onClick={add}>ADD NEW WORKOUT</button>
+      </div>
     </>
   );
 }
@@ -181,14 +222,15 @@ function Workout({ workout, setWorkouts, token }) {
       });
   }
   return (
-    <div>
-      <li>
-        <span>{workout.title}</span>
-        <span>{workout.reps}</span>
-        <span>{workout.load}</span>
-      </li>
-      <button>UPDATE</button>
-      <button onClick={DeleteWorkout}> DELETE</button>
-    </div>
+    <li className="listitem">
+      <span>Title : {workout.title}</span>&nbsp;&nbsp;&nbsp;
+      <span>Reps: {workout.reps}</span>&nbsp;&nbsp;&nbsp;
+      <span>Loads: {workout.load}</span>
+      <button className="updateb">UPDATE</button>
+      <button onClick={DeleteWorkout} className="deleteb">
+        {" "}
+        DELETE
+      </button>
+    </li>
   );
 }
