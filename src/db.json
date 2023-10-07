@@ -1,0 +1,44 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "Jay19",
+      "password": "123"
+    },
+    {
+      "id": 2,
+      "username": "unknown",
+      "password": "abc"
+    }
+  ],
+  "blogs": [
+    {
+      "username": "unknown",
+      "title": "Improving Writing and Communication Skills",
+      "body": "Writing! You can't blog without writing. While some students might dread writing, the fact that they are creating content that goes out onto the web can make it fun. They will improve their written communication skills without even thinking about it.\n\nExplore some teachers and students who have truly embraced blogging in their classrooms and in their lives in inspirational ways!",
+      "likes": 7,
+      "id": 5
+    },
+    {
+      "username": "Jay19",
+      "title": "Mrs. Moore's Class",
+      "body": "A 5th grade classroom blog headed by Mrs. Moore explores students' interactions with the world through their own thoughts. While Mrs. Moore provides posts on trips like visiting Denali National Park and the Intrepid Sea, Air & Space Museum, she allows her students to share their thoughts and projects with other students on her classroom blog. Students also share reflections on the page that work to inspire other students within their studies.",
+      "likes": 4,
+      "id": 8
+    },
+    {
+      "username": "Jay19",
+      "title": "Connected Teaching and Learning",
+      "body": "In an effort to create a global classroom, Norwegian teacher Ann S. Michaelsen is allowing her high school students to share their thoughts through blogging. Michaelsen offers insightful information for teachers, students and parents through the main page that covers education and lesson topics. Students also get to share their insights on topics like climate change through their own personal blogs.",
+      "likes": 6,
+      "id": 9
+    },
+    {
+      "username": "unknown",
+      "title": "luke morpy",
+      "body": "Looking to offer new knowledge and motivate others, Luke Murphy, a bachelor's student at Open University, offers tips and tricks for success through his personal blog. By referencing what he is doing through his journey, he is hoping to inspire others. Peruse through technology and photography categories through posts with study tips for mature students and thoughts on artificial intelligence.",
+      "likes": 0,
+      "id": 10
+    }
+  ]
+}
