@@ -1,0 +1,60 @@
+
+#Navbar{
+  display: grid;
+  grid-template-columns: 1200px auto auto auto auto ;
+  column-gap:15px;
+  background-color:black;
+  border-radius:5px;
+}
+
+#sideNav{
+  font-size:20px;
+  color:rgb(79, 225, 241);
+}
+
+#logo{
+  font-size:40px;
+  color:rgb(79, 225, 241);
+  padding-left:10px;
+
+}
+#logo:hover{
+  color:red;
+}
+.Userlogin{
+  background-color:black;
+  border-radius: 35px;
+  font-size: 20px;
+  color:white;
+  text-align: center;
+  padding:100px;
+  margin: 160px 500px;
+  
+}
+#upperuserdata{
+  display:grid;
+  grid-template-columns:1200px 200px;
+}
+.addblgbttn{
+  border-radius:10px;
+  margin:20px 20px;
+  padding-top:10px;
+  text-align:center;
+  background-color:black;
+}
+.addblgbttn1:hover{
+  color:red;
+}
+body{
+  background-color: rgb(79, 225, 241);
+  color:black;
+}
+.addblogs{
+  background-color:black;
+  border-radius: 35px;
+  font-size: 20px;
+  color:white;
+  text-align: center;
+  padding:100px;
+  margin: 50px 200px;
+}
