@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  margin: 0;
+  font-family: "Quicksand";
+  color: #333;
+}
+.navbar {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  border-bottom: 2px solid #f2f2f2;
+}
+.navbar h1 {
+  color: #f1356d;
+}
+.navbar .links {
+  margin-left: auto;
+}
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+}
+.navbar a:hover {
+  color: #f1356d;
+}
+.content {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+}
+/* blog previews / list */
+.blog-preview {
+  padding: 10px 16px;
+  margin: 20px 0;
+  border-bottom: 1px solid #fafafa;
+}
+.blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.blog-preview h3 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 8px;
+}
+.blog-preview a {
+  text-decoration: none;
+}
+/* blog details page */
+.blog-details h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+.blog-details div {
+  margin: 20px 0;
+}
+.blog-details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* */
+.create {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  background-color: beige;
+  border-radius: 7%;
+}
+
+.create form{
+  padding-top: 0px;
+}
+
+.create label {
+  text-align: left;
+  font-weight: 700;
+  display: block;
+}
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.create button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* */
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(162, 228, 65);
+  border-radius: 7%;
+}
+
+.login form{
+  padding-top: 0px;
+}
+
+.login label {
+  text-align: left;
+  font-weight: 700;
+  display: block;
+  padding-left: 1%;
+}
+.login h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.login input, .login textarea, .login select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.login button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+/* */
+
+/* */
+.workout h3{
+  padding: 5%;
+  color: #f1356d;
+}
+.workout {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 10%;
+  height: 9.5cm;
+  background-color: beige;
+  justify-content: center;
+  align-content: center;
+}
+
+.workout form {
+  justify-content: center;
+  align-content: center;
+}
+.home {
+  flex: content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  /* transform: translateX(-100); */
+}
+.workout label {
+  text-align: left;
+  font-weight: 700;
+  display: block;
+  padding: 5px;
+}
+.workout h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.workout input, .workout textarea, .workout select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.workout button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.preview {
+  max-width: 240px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 20px;
+  border-radius: 10%;
+  padding-bottom: 2%;
+  height: 2.5cm;
+  background-color: beige;
+}
+.preview button{
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer; 
+}
+.dashboard {
+  padding-top: 40px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 5%;
+  padding-bottom: 10px;
+  height: auto;
+  background-color: wheat;
+}
+
+.dashboard h2, h3 {
+  color: #f1356d;
+  padding-bottom: 20px;
+}
+.dashboard a{
+  text-decoration: none;
+  background: lightblue;
+  color: black;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.dashboard button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  align-content: last baseline;
+  justify-content: flex-end;
+  cursor: pointer;
+  position: relative;
+  bottom: -4px;;
+}
+
+.fetchboard {
+  padding-top: 40px;
+}
+
+.fetchboard h2, h3 {
+  color: #f1356d;
+  padding-bottom: 20px;
+}
+.fetchboard a{
+  text-decoration: none;
+  background: lightblue;
+  color: black;
+  border: 0;
+  padding: 8px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.details {
+  padding-top: 7%;
+  align-content: center;
+  justify-content: center;
+}
+
+.details form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(162, 228, 65);
+  border-radius: 3%;
+}
+
+.details button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.wk-preview {
+  background-color: bisque;
+  padding-top: 30px;
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 7%;
+  padding-bottom: 20px;;
+}
+
+/* .update h3{
+  padding: 5%;
+  color: #f1356d;
+}
+/* .update { */
+  /* max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 10px;
+  border-radius: 10%;
+  height: 9.5cm;
+  background-color: beige;
+  justify-content: center;
+  align-content: center;
+} */
+
+.update form {
+  justify-content: center;
+  align-content: center;
+}
+.update label {
+  text-align: left;
+  font-weight: 700;
+  display: block;
+  padding: 5px;
+}
+.update h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+.update input, .update textarea, .update select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+.update button {
+  background: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
