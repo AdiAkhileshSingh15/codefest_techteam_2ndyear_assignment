@@ -85,20 +85,23 @@ function Login({ setToken, setDisplayEmail, setDisplayWorkouts, setWorkouts }) {
 
   return (
     <>
-      <input
-        type="text"
-        placeholder="Enter your email"
-        onChange={(e) => setEmail(e.target.value)}
-        value={email}
-        className="form"
-      ></input>
-      <input
-        type="password"
-        placeholder="Enter your password"
-        onChange={(e) => setPassword(e.target.value)}
-        value={password}
-        className="form"
-      ></input>
+      <div className="padded" style={{ marginTop: "50px" }}>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          className="newWorkout"
+        ></input>
+        <br></br>
+        <input
+          type="password"
+          placeholder="Enter your password"
+          onChange={(e) => setPassword(e.target.value)}
+          value={password}
+          className="newWorkout"
+        ></input>
+      </div>
       <div class="centered-container">
         <button onClick={() => NewLogIn("signup")} className="updateb">
           SIGN UP
@@ -115,20 +118,21 @@ function Login({ setToken, setDisplayEmail, setDisplayWorkouts, setWorkouts }) {
 function Display({ email, token, workouts, setWorkouts }) {
   return (
     <>
-      {" "}
       <h1> Welcome {email}</h1>
-      <h2> You have following planned workouts</h2>
-      <ul className="workouts">
-        {!!workouts.length &&
-          workouts.map((workout) => (
-            <Workout
-              workout={workout}
-              key={workout._id}
-              setWorkouts={setWorkouts}
-              token={token}
-            />
-          ))}
-      </ul>
+      <h2> Your list has {workouts.length} workouts </h2>
+      {!!workouts.length && (
+        <ul className="workouts">
+          {!!workouts.length &&
+            workouts.map((workout) => (
+              <Workout
+                workout={workout}
+                key={workout._id}
+                setWorkouts={setWorkouts}
+                token={token}
+              />
+            ))}
+        </ul>
+      )}
       <NewWorkout addWorkout={setWorkouts} token={token} />
     </>
   );
@@ -169,31 +173,33 @@ function NewWorkout({ addWorkout, token }) {
   return (
     <>
       <h2>You can add workouts here</h2>
-      <input
-        type="text"
-        placeholder="Write here"
-        value={title}
-        className="newWorkout"
-        onChange={(event) => {
-          setTitle(event.target.value);
-        }}
-      ></input>
-      <input
-        type="number"
-        placeholder="Write here"
-        value={reps}
-        className="newWorkout"
-        onChange={(event) => setReps(1 * event.target.value)}
-      ></input>
-      <select
-        className="values"
-        value={loads}
-        onChange={(event) => setLoads(1 * event.target.value)}
-      >
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((val) => (
-          <option value={val}>{val}</option>
-        ))}
-      </select>
+      <div className="padded">
+        <input
+          type="text"
+          placeholder="Write here"
+          value={title}
+          className="newWorkout"
+          onChange={(event) => {
+            setTitle(event.target.value);
+          }}
+        ></input>
+        <input
+          type="number"
+          placeholder="Write here"
+          value={reps}
+          className="newWorkout"
+          onChange={(event) => setReps(1 * event.target.value)}
+        ></input>
+        <select
+          className="values"
+          value={loads}
+          onChange={(event) => setLoads(1 * event.target.value)}
+        >
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((val) => (
+            <option value={val}>{val}</option>
+          ))}
+        </select>
+      </div>
       <div className="centered-container">
         <button onClick={add}>ADD NEW WORKOUT</button>
       </div>
