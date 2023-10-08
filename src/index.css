@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 36px;
+  color: #333;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  font-size: 30px;
+  color: #ad1717;
+  font-family: "MONOTON";
+  margin-bottom: 20px;
+  width: 90%;
+  display: inline-block;
+  text-align: left;
+  padding-left: 40px;
+}
+
+.toggle-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login-signup {
+  margin-top: 20px;
+}
+
+.display {
+  margin-top: 20px;
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.newWorkout {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.updateb,
+.deleteb,
+.logoutb,
+.submitb {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.deleteb {
+  background-color: #ff5e00;
+}
+
+.updateb:hover,
+.logoutb:hover {
+  background-color: #0056b3;
+}
+.deleteb:hover {
+  background-color: #b54403;
+}
+
+.display {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.workouts {
+  list-style: none;
+  padding: 0;
+}
+
+.workouts li {
+  margin: 15px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.workouts li:hover {
+  transform: scale(1.02);
+}
+
+.add {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.add input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.add input[type="text"],
+.add input[type="number"] {
+  background-color: #f9f9f9;
+}
+
+.add input[type="text"]:focus,
+.add input[type="number"]:focus {
+  border-color: #007bff;
+}
+
+.centered-container button {
+  font-size: 18px;
+}
+
+.centered-container button {
+  font-size: 18px;
+}
+.slbuttons {
+  display: block;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.slbuttons button {
+  flex: 1;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.slbuttons button.updateb {
+  background-color: #007bff;
+  color: white;
+}
+
+.slbuttons button.updateb:hover {
+  background-color: #003873;
+}
+
+.slbuttons button.deleteb {
+  background-color: #dc3545;
+  color: white;
+}
+
+.slbuttons button.deleteb:hover {
+  background-color: #c7192a;
+}
+
+button.submitb {
+  background-color: #00fb71;
+  color: white;
+}
+
+button.submitb:hover {
+  background-color: #dcf62f;
+}
+
+button.logoutb {
+  background-color: #fb2200;
+  color: white;
+}
+
+button.logoutb:hover {
+  background-color: #cb6050;
+}
+
+@media (max-width: 768px) {
+  .centered-container {
+    margin-top: 10px;
+  }
+
+  .newWorkout {
+    font-size: 16px;
+  }
+
+  .updateb,
+  .deleteb,
+  .submitb {
+    font-size: 16px;
+    float: right;
+  }
+
+  .logoutb {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .workouts li {
+    padding: 15px;
+  }
+}
+span {
+  font-weight: bold;
+  color: #333;
+  margin-right: 20px;
+  font-size: 20px;
+  text-align: left;
+}
+
+.workout-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.workout-details {
+  flex-grow: 1;
+}
+.workout-details {
+  text-align: left;
+}
+
+.workout-details span {
+  display: block;
+  text-align: left;
+}
+
+.workout-buttons {
+  display: flex;
+  gap: 10px;
+}
