@@ -53,7 +53,7 @@ const Login = () => {
                 onChange={(e)=>setEmail(e.target.value)}/>
                 <label >Password</label>
                 
-                <input type="text" placeholder="Password" required
+                <input type="password" placeholder="Password" required
                 value={password}
                 onChange={(e)=>setPassword(e.target.value)}/>
                 <button type='submit'>Login</button>
