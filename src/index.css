@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+}
+.Login{
+  width: 100%;
+  height:100vh;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498Db;
+  
+}
+.box{
+  width: 250px;
+  padding: 10px;
+  min-height: 40vh;
+  display: flex;
+  flex-direction:column;
+  
+  border-radius: 25px;
+  background-color: gray;
+}
+h2{
+  margin-top: 5px;
+}
+label{
+  margin-right: auto;
+  margin-left: 12px;
+  margin-top: 10px;
+}
+input{
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  margin: 5px;
+  padding: 10px;
+}
+button{
+  width: 70px;
+  margin-left: auto;
+  border-radius: 20px;
+  border: none;
+  margin-top: 20px;
+
+  
+  
+  
+
+}
+
+button :hover{
+  cursor: pointer;
+}
